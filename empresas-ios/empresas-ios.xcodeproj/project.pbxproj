@@ -17,9 +17,19 @@
 		BF79199526FA6BCC00D25E74 /* empresas_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF79199426FA6BCC00D25E74 /* empresas_iosUITests.swift */; };
 		BF8015DB2704F04A0029315F /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8015DA2704F04A0029315F /* Coordinator.swift */; };
 		BF8015DE2704F1700029315F /* LoginViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8015DD2704F1700029315F /* LoginViewControllerFactory.swift */; };
-		BF8015E32704F6B70029315F /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8015E22704F6B70029315F /* LoginAssembly.swift */; };
 		BF8015F22704FB090029315F /* AppCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8015F12704FB090029315F /* AppCoordinatorProtocol.swift */; };
 		BF8015F4270500B90029315F /* DependencyInjection.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF8015F3270500B90029315F /* DependencyInjection.swift */; };
+		BF801603270B326C0029315F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801602270B326C0029315F /* LoginView.swift */; };
+		BF801606270B32820029315F /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801605270B32820029315F /* LoginPresenter.swift */; };
+		BF801609270B347B0029315F /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801608270B347B0029315F /* LoginCoordinator.swift */; };
+		BF80160D270B3A670029315F /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF80160C270B3A670029315F /* CoordinatorFactory.swift */; };
+		BF801610270B3AAB0029315F /* CoordinatorFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF80160F270B3AAB0029315F /* CoordinatorFactoryProtocol.swift */; };
+		BF801612270B3D8D0029315F /* CoordinatorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801611270B3D8D0029315F /* CoordinatorAssembly.swift */; };
+		BF801614270B3DEE0029315F /* LoginCoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801613270B3DEE0029315F /* LoginCoordinatorProtocol.swift */; };
+		BF801616270B46670029315F /* ViewControllerAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801615270B46670029315F /* ViewControllerAssembly.swift */; };
+		BF801618270B47670029315F /* LoginViewControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801617270B47670029315F /* LoginViewControllerFactoryProtocol.swift */; };
+		BF80161B270B4E7E0029315F /* CoordinatorFactoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF80161A270B4E7E0029315F /* CoordinatorFactoryAssembly.swift */; };
+		BF80161D270B6C920029315F /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF80161C270B6C920029315F /* LoginAssembly.swift */; };
 		BFE83A4227023B43001E8A62 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE83A4127023B43001E8A62 /* AppCoordinator.swift */; };
 		CB44536EBE39D3374A2FA018 /* Pods_empresas_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA35CD42B1A566A4898A155 /* Pods_empresas_ios.framework */; };
 		FCE1709425022AEFC0A6E91D /* Pods_empresas_ios_empresas_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF0EDF6A9906314F296531B /* Pods_empresas_ios_empresas_iosUITests.framework */; };
@@ -80,9 +90,19 @@
 		BF79199626FA6BCC00D25E74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF8015DA2704F04A0029315F /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		BF8015DD2704F1700029315F /* LoginViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerFactory.swift; sourceTree = "<group>"; };
-		BF8015E22704F6B70029315F /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		BF8015F12704FB090029315F /* AppCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinatorProtocol.swift; sourceTree = "<group>"; };
 		BF8015F3270500B90029315F /* DependencyInjection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependencyInjection.swift; sourceTree = "<group>"; };
+		BF801602270B326C0029315F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BF801605270B32820029315F /* LoginPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
+		BF801608270B347B0029315F /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
+		BF80160C270B3A670029315F /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
+		BF80160F270B3AAB0029315F /* CoordinatorFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryProtocol.swift; sourceTree = "<group>"; };
+		BF801611270B3D8D0029315F /* CoordinatorAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorAssembly.swift; sourceTree = "<group>"; };
+		BF801613270B3DEE0029315F /* LoginCoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinatorProtocol.swift; sourceTree = "<group>"; };
+		BF801615270B46670029315F /* ViewControllerAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerAssembly.swift; sourceTree = "<group>"; };
+		BF801617270B47670029315F /* LoginViewControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerFactoryProtocol.swift; sourceTree = "<group>"; };
+		BF80161A270B4E7E0029315F /* CoordinatorFactoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryAssembly.swift; sourceTree = "<group>"; };
+		BF80161C270B6C920029315F /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
 		BFE83A4127023B43001E8A62 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -139,9 +159,9 @@
 		BF79197126FA6BC600D25E74 /* empresas-ios */ = {
 			isa = PBXGroup;
 			children = (
+				BF8015FF270B32340029315F /* Scenes */,
 				BF8015E02704F34E0029315F /* DependencyInjection */,
 				BF8015DF2704F2160029315F /* Controllers */,
-				BF8015DC2704F14E0029315F /* Factories */,
 				BFE83A4027023B2B001E8A62 /* Coordinators */,
 				BF79197226FA6BC600D25E74 /* AppDelegate.swift */,
 				BF79197426FA6BC600D25E74 /* SceneDelegate.swift */,
@@ -173,7 +193,8 @@
 		BF8015DC2704F14E0029315F /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				BF8015DD2704F1700029315F /* LoginViewControllerFactory.swift */,
+				BF80160E270B3A860029315F /* ViewControllersFactory */,
+				BF80160B270B3A4C0029315F /* CoordinatorFactory */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -189,18 +210,14 @@
 		BF8015E02704F34E0029315F /* DependencyInjection */ = {
 			isa = PBXGroup;
 			children = (
-				BF8015E12704F69E0029315F /* LoginAssembly */,
+				BF8015DC2704F14E0029315F /* Factories */,
 				BF8015F3270500B90029315F /* DependencyInjection.swift */,
+				BF801611270B3D8D0029315F /* CoordinatorAssembly.swift */,
+				BF801615270B46670029315F /* ViewControllerAssembly.swift */,
+				BF80161A270B4E7E0029315F /* CoordinatorFactoryAssembly.swift */,
+				BF80161C270B6C920029315F /* LoginAssembly.swift */,
 			);
 			path = DependencyInjection;
-			sourceTree = "<group>";
-		};
-		BF8015E12704F69E0029315F /* LoginAssembly */ = {
-			isa = PBXGroup;
-			children = (
-				BF8015E22704F6B70029315F /* LoginAssembly.swift */,
-			);
-			path = LoginAssembly;
 			sourceTree = "<group>";
 		};
 		BF8015E42704F7E40029315F /* Frameworks */ = {
@@ -222,9 +239,70 @@
 			path = AppCoordinator;
 			sourceTree = "<group>";
 		};
+		BF8015FF270B32340029315F /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				BF801600270B32440029315F /* Login */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		BF801600270B32440029315F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF801601270B32590029315F /* Views */,
+				BF801605270B32820029315F /* LoginPresenter.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF801601270B32590029315F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BF801602270B326C0029315F /* LoginView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BF801607270B34690029315F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF801608270B347B0029315F /* LoginCoordinator.swift */,
+				BF801613270B3DEE0029315F /* LoginCoordinatorProtocol.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		BF80160B270B3A4C0029315F /* CoordinatorFactory */ = {
+			isa = PBXGroup;
+			children = (
+				BF80160C270B3A670029315F /* CoordinatorFactory.swift */,
+				BF80160F270B3AAB0029315F /* CoordinatorFactoryProtocol.swift */,
+			);
+			path = CoordinatorFactory;
+			sourceTree = "<group>";
+		};
+		BF80160E270B3A860029315F /* ViewControllersFactory */ = {
+			isa = PBXGroup;
+			children = (
+				BF801619270B49900029315F /* Login */,
+			);
+			path = ViewControllersFactory;
+			sourceTree = "<group>";
+		};
+		BF801619270B49900029315F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				BF8015DD2704F1700029315F /* LoginViewControllerFactory.swift */,
+				BF801617270B47670029315F /* LoginViewControllerFactoryProtocol.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		BFE83A4027023B2B001E8A62 /* Coordinators */ = {
 			isa = PBXGroup;
 			children = (
+				BF801607270B34690029315F /* Login */,
 				BF8015F02704FAF50029315F /* AppCoordinator */,
 				BF8015DA2704F04A0029315F /* Coordinator.swift */,
 			);
@@ -486,10 +564,20 @@
 				BFE83A4227023B43001E8A62 /* AppCoordinator.swift in Sources */,
 				BF79197726FA6BC600D25E74 /* LoginViewController.swift in Sources */,
 				BF8015DB2704F04A0029315F /* Coordinator.swift in Sources */,
+				BF801606270B32820029315F /* LoginPresenter.swift in Sources */,
 				BF79197326FA6BC600D25E74 /* AppDelegate.swift in Sources */,
+				BF80161B270B4E7E0029315F /* CoordinatorFactoryAssembly.swift in Sources */,
+				BF801616270B46670029315F /* ViewControllerAssembly.swift in Sources */,
+				BF80160D270B3A670029315F /* CoordinatorFactory.swift in Sources */,
+				BF801618270B47670029315F /* LoginViewControllerFactoryProtocol.swift in Sources */,
+				BF801609270B347B0029315F /* LoginCoordinator.swift in Sources */,
+				BF80161D270B6C920029315F /* LoginAssembly.swift in Sources */,
+				BF801614270B3DEE0029315F /* LoginCoordinatorProtocol.swift in Sources */,
 				BF8015F4270500B90029315F /* DependencyInjection.swift in Sources */,
-				BF8015E32704F6B70029315F /* LoginAssembly.swift in Sources */,
+				BF801610270B3AAB0029315F /* CoordinatorFactoryProtocol.swift in Sources */,
 				BF8015F22704FB090029315F /* AppCoordinatorProtocol.swift in Sources */,
+				BF801612270B3D8D0029315F /* CoordinatorAssembly.swift in Sources */,
+				BF801603270B326C0029315F /* LoginView.swift in Sources */,
 				BF79197526FA6BC600D25E74 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

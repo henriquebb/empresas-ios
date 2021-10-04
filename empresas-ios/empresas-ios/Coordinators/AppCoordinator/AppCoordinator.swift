@@ -7,18 +7,23 @@
 
 import UIKit
 
-class AppCoordinator: Coordinator {
-    
+class AppCoordinator: Coordinator, AppCoordinatorProtocol {
+
     var navigationController: UINavigationController?
-    var loginViewControllerFactory: LoginViewControllerFactory?
+    var childCoordinators: [Coordinator] = []
+    var coordinatorFactory: CoordinatorFactoryProtocol?
     
-    init(navigationController: UINavigationController?, loginViewControllerFactory: LoginViewControllerFactory?) {
+    
+    required init(navigationController: UINavigationController?, coordinatorFactory: CoordinatorFactoryProtocol) {
         self.navigationController = navigationController
-        self.loginViewControllerFactory = loginViewControllerFactory
+        self.coordinatorFactory = coordinatorFactory
     }
     
     func start() {
-        guard let loginVC = loginViewControllerFactory?.makeLoginViewController() else { return }
-        navigationController?.pushViewController(loginVC, animated: true)
+        guard let loginCoordinator = coordinatorFactory?.makeLoginCoordinator() else {
+            return
+        }
+        loginCoordinator.start()
+        childCoordinators.append(loginCoordinator)
     }
 }

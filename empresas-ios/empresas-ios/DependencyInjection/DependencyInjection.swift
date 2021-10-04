@@ -12,6 +12,9 @@ class DependencyInjection {
     var assembler: Assembler?
     
     init() {
-        assembler = Assembler([LoginAssembly()])
+        assembler = Assembler([CoordinatorAssembly(),
+                               CoordinatorFactoryAssembly(),
+                               ViewControllerAssembly(),
+                               LoginAssembly()])
     }
 }

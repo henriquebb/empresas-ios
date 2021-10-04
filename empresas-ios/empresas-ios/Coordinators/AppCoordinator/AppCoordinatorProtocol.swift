@@ -8,5 +8,5 @@
 import UIKit
 
 protocol AppCoordinatorProtocol {
-    init(navigationController: UINavigationController?, loginViewControllerFactory: LoginViewControllerFactory?)
+    init(navigationController: UINavigationController?, coordinatorFactory: CoordinatorFactoryProtocol)
 }

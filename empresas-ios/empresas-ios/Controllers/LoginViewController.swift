@@ -7,14 +7,35 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+protocol LoginPresenting: AnyObject {
+    
+}
 
+class LoginViewController: UIViewController {
+    
+    var loginView = LoginView()
+    var presenter: LoginPresenting?
+    
+    init(presenter: LoginPresenting) {
+        super.init(nibName: nil, bundle: nil)
+        self.presenter = presenter
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
         // Do any additional setup after loading the view.
     }
+    
+    override func loadView() {
+        view = LoginView()
+    }
+}
 
-
+extension LoginViewController: LoginViewable {
+    
 }
 

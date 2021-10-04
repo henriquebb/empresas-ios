@@ -22,11 +22,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        appCoordinator = assembler?.resolver.resolve(AppCoordinator.self)
-        window?.rootViewController = appCoordinator?.navigationController
+        guard let appCoordinator = assembler?.resolver.resolve(AppCoordinatorProtocol.self) as? AppCoordinator else {
+            preconditionFailure("App Coordinator is nil")
+        }
+        self.appCoordinator = appCoordinator
+        window?.rootViewController = appCoordinator.navigationController
         // coordinator = AppCoordinator(navigationController: UINavigationController)
         window?.windowScene = windowScene
-        appCoordinator?.start()
+        appCoordinator.start()
     }
 }
 
