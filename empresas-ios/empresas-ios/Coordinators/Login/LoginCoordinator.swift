@@ -21,6 +21,7 @@ class LoginCoordinator: Coordinator, LoginCoordinatorProtocol {
     
     func start() {
         guard let loginVC = loginViewControllerFactory?.makeLoginViewController() else { return }
+        navigationController?.navigationBar.isHidden = true
         navigationController?.pushViewController(loginVC, animated: true)
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import Swinject
+import Domain
 
 class LoginAssembly: Assembly {
     func assemble(container: Container) {
@@ -17,7 +18,10 @@ class LoginAssembly: Assembly {
             loginCoordinator
         }
         container.register(LoginPresenting.self) { resolver in
-            LoginPresenter(coordinator: loginCoordinator)
+            guard let emailValidationUseCase = resolver.resolve(EmailValidationUseCaseProtocol.self) else {
+                preconditionFailure("EmailValidationUseCase is nil")
+            }
+            return LoginPresenter(coordinator: loginCoordinator, emailValidationUseCase: emailValidationUseCase)
         }
     }
 }

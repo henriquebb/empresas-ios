@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Domain
 
 protocol LoginViewable: AnyObject {
     
@@ -19,9 +20,11 @@ class LoginPresenter {
     
     private weak var view: LoginViewable?
     private weak var coordinator: LoginCoordinating?
+    private var emailValidationUseCase: EmailValidationUseCaseProtocol
     
-    init(coordinator: LoginCoordinating) {
+    init(coordinator: LoginCoordinating, emailValidationUseCase: EmailValidationUseCaseProtocol) {
         self.coordinator = coordinator
+        self.emailValidationUseCase = emailValidationUseCase
     }
     
     func attachView(_ view: LoginViewable) {
@@ -31,4 +34,10 @@ class LoginPresenter {
 
 extension LoginPresenter: LoginPresenting {
     
+}
+
+extension LoginPresenter: LoginViewDelegate {
+    func validateEmail(email: String) -> Bool {
+        emailValidationUseCase.execute(email: email)
+    }
 }

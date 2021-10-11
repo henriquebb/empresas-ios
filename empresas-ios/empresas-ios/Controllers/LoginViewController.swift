@@ -31,7 +31,9 @@ class LoginViewController: UIViewController {
     }
     
     override func loadView() {
-        view = LoginView()
+        let loginView = LoginView()
+        loginView.delegate = presenter as? LoginViewDelegate
+        view = loginView
     }
 }
 

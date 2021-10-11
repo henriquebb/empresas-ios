@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		4CD30BB26D95E44DD7F917C8 /* Pods_empresas_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D40CAE6ABEEE94238516981 /* Pods_empresas_iosTests.framework */; };
+		BF6B82CC270F27490017D1C1 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B82CB270F27490017D1C1 /* Colors.swift */; };
+		BF6B82D1270F2E680017D1C1 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B82D0270F2E680017D1C1 /* TextField.swift */; };
+		BF6B82D3270F53930017D1C1 /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6B82D2270F53930017D1C1 /* Roboto-Medium.ttf */; };
+		BF6B82D5270F57330017D1C1 /* TextFieldLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B82D4270F57330017D1C1 /* TextFieldLabel.swift */; };
+		BF6B82D7270F5FB50017D1C1 /* Heebo-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF6B82D6270F5FB50017D1C1 /* Heebo-Medium.ttf */; };
+		BF6B82D92710A7170017D1C1 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B82D82710A7170017D1C1 /* UIView+Extension.swift */; };
+		BF6B839D2710DC1A0017D1C1 /* DomainAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6B839C2710DC1A0017D1C1 /* DomainAssembly.swift */; };
 		BF79197326FA6BC600D25E74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF79197226FA6BC600D25E74 /* AppDelegate.swift */; };
 		BF79197526FA6BC600D25E74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF79197426FA6BC600D25E74 /* SceneDelegate.swift */; };
 		BF79197726FA6BC600D25E74 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF79197626FA6BC600D25E74 /* LoginViewController.swift */; };
@@ -30,6 +37,10 @@
 		BF801618270B47670029315F /* LoginViewControllerFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF801617270B47670029315F /* LoginViewControllerFactoryProtocol.swift */; };
 		BF80161B270B4E7E0029315F /* CoordinatorFactoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF80161A270B4E7E0029315F /* CoordinatorFactoryAssembly.swift */; };
 		BF80161D270B6C920029315F /* LoginAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF80161C270B6C920029315F /* LoginAssembly.swift */; };
+		BF80161F270CC5E50029315F /* ImageResources.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF80161E270CC5E50029315F /* ImageResources.swift */; };
+		BFE09081270CDEB800A5D8D0 /* Khula-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFE09080270CDEB400A5D8D0 /* Khula-SemiBold.ttf */; };
+		BFE09082270CDEBC00A5D8D0 /* Khula-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFE0907F270CDEAD00A5D8D0 /* Khula-Bold.ttf */; };
+		BFE09084270CE68400A5D8D0 /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFE09083270CE68400A5D8D0 /* Roboto-Light.ttf */; };
 		BFE83A4227023B43001E8A62 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE83A4127023B43001E8A62 /* AppCoordinator.swift */; };
 		CB44536EBE39D3374A2FA018 /* Pods_empresas_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBA35CD42B1A566A4898A155 /* Pods_empresas_ios.framework */; };
 		FCE1709425022AEFC0A6E91D /* Pods_empresas_ios_empresas_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AF0EDF6A9906314F296531B /* Pods_empresas_ios_empresas_iosUITests.framework */; };
@@ -75,6 +86,13 @@
 		7F2DA8CF439510F0A371BDD0 /* Pods-empresas-ios-empresas-iosUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-empresas-ios-empresas-iosUITests.debug.xcconfig"; path = "Target Support Files/Pods-empresas-ios-empresas-iosUITests/Pods-empresas-ios-empresas-iosUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AF0EDF6A9906314F296531B /* Pods_empresas_ios_empresas_iosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_empresas_ios_empresas_iosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBA35CD42B1A566A4898A155 /* Pods_empresas_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_empresas_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF6B82CB270F27490017D1C1 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BF6B82D0270F2E680017D1C1 /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
+		BF6B82D2270F53930017D1C1 /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		BF6B82D4270F57330017D1C1 /* TextFieldLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldLabel.swift; sourceTree = "<group>"; };
+		BF6B82D6270F5FB50017D1C1 /* Heebo-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Heebo-Medium.ttf"; sourceTree = "<group>"; };
+		BF6B82D82710A7170017D1C1 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		BF6B839C2710DC1A0017D1C1 /* DomainAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DomainAssembly.swift; path = "empresas-ios/DependencyInjection/DomainAssembly.swift"; sourceTree = SOURCE_ROOT; };
 		BF79196F26FA6BC600D25E74 /* empresas-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "empresas-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF79197226FA6BC600D25E74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF79197426FA6BC600D25E74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -103,6 +121,10 @@
 		BF801617270B47670029315F /* LoginViewControllerFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerFactoryProtocol.swift; sourceTree = "<group>"; };
 		BF80161A270B4E7E0029315F /* CoordinatorFactoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactoryAssembly.swift; sourceTree = "<group>"; };
 		BF80161C270B6C920029315F /* LoginAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginAssembly.swift; sourceTree = "<group>"; };
+		BF80161E270CC5E50029315F /* ImageResources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageResources.swift; sourceTree = "<group>"; };
+		BFE0907F270CDEAD00A5D8D0 /* Khula-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-Bold.ttf"; sourceTree = "<group>"; };
+		BFE09080270CDEB400A5D8D0 /* Khula-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Khula-SemiBold.ttf"; sourceTree = "<group>"; };
+		BFE09083270CE68400A5D8D0 /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
 		BFE83A4127023B43001E8A62 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -134,6 +156,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF6B82CF270F2E5B0017D1C1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B82D0270F2E680017D1C1 /* TextField.swift */,
+				BF6B82D4270F57330017D1C1 /* TextFieldLabel.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		BF79196626FA6BC600D25E74 = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +190,9 @@
 		BF79197126FA6BC600D25E74 /* empresas-ios */ = {
 			isa = PBXGroup;
 			children = (
+				BF6B82CF270F2E5B0017D1C1 /* Helpers */,
+				BFE09085270DC83300A5D8D0 /* Extensions */,
+				BFE0907E270CDEA100A5D8D0 /* Fonts */,
 				BF8015FF270B32340029315F /* Scenes */,
 				BF8015E02704F34E0029315F /* DependencyInjection */,
 				BF8015DF2704F2160029315F /* Controllers */,
@@ -168,6 +202,8 @@
 				BF79197B26FA6BCB00D25E74 /* Assets.xcassets */,
 				BF79197D26FA6BCB00D25E74 /* LaunchScreen.storyboard */,
 				BF79198026FA6BCB00D25E74 /* Info.plist */,
+				BF80161E270CC5E50029315F /* ImageResources.swift */,
+				BF6B82CB270F27490017D1C1 /* Colors.swift */,
 			);
 			path = "empresas-ios";
 			sourceTree = "<group>";
@@ -216,6 +252,7 @@
 				BF801615270B46670029315F /* ViewControllerAssembly.swift */,
 				BF80161A270B4E7E0029315F /* CoordinatorFactoryAssembly.swift */,
 				BF80161C270B6C920029315F /* LoginAssembly.swift */,
+				BF6B839C2710DC1A0017D1C1 /* DomainAssembly.swift */,
 			);
 			path = DependencyInjection;
 			sourceTree = "<group>";
@@ -297,6 +334,26 @@
 				BF801617270B47670029315F /* LoginViewControllerFactoryProtocol.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		BFE0907E270CDEA100A5D8D0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B82D6270F5FB50017D1C1 /* Heebo-Medium.ttf */,
+				BFE09080270CDEB400A5D8D0 /* Khula-SemiBold.ttf */,
+				BFE0907F270CDEAD00A5D8D0 /* Khula-Bold.ttf */,
+				BFE09083270CE68400A5D8D0 /* Roboto-Light.ttf */,
+				BF6B82D2270F53930017D1C1 /* Roboto-Medium.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BFE09085270DC83300A5D8D0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BF6B82D82710A7170017D1C1 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		BFE83A4027023B2B001E8A62 /* Coordinators */ = {
@@ -431,6 +488,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6B82D7270F5FB50017D1C1 /* Heebo-Medium.ttf in Resources */,
+				BFE09081270CDEB800A5D8D0 /* Khula-SemiBold.ttf in Resources */,
+				BFE09082270CDEBC00A5D8D0 /* Khula-Bold.ttf in Resources */,
+				BF6B82D3270F53930017D1C1 /* Roboto-Medium.ttf in Resources */,
+				BFE09084270CE68400A5D8D0 /* Roboto-Light.ttf in Resources */,
 				BF79197F26FA6BCB00D25E74 /* LaunchScreen.storyboard in Resources */,
 				BF79197C26FA6BCB00D25E74 /* Assets.xcassets in Resources */,
 			);
@@ -560,15 +622,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6B839D2710DC1A0017D1C1 /* DomainAssembly.swift in Sources */,
 				BF8015DE2704F1700029315F /* LoginViewControllerFactory.swift in Sources */,
+				BF6B82CC270F27490017D1C1 /* Colors.swift in Sources */,
+				BF6B82D1270F2E680017D1C1 /* TextField.swift in Sources */,
 				BFE83A4227023B43001E8A62 /* AppCoordinator.swift in Sources */,
 				BF79197726FA6BC600D25E74 /* LoginViewController.swift in Sources */,
 				BF8015DB2704F04A0029315F /* Coordinator.swift in Sources */,
 				BF801606270B32820029315F /* LoginPresenter.swift in Sources */,
+				BF6B82D5270F57330017D1C1 /* TextFieldLabel.swift in Sources */,
 				BF79197326FA6BC600D25E74 /* AppDelegate.swift in Sources */,
 				BF80161B270B4E7E0029315F /* CoordinatorFactoryAssembly.swift in Sources */,
 				BF801616270B46670029315F /* ViewControllerAssembly.swift in Sources */,
 				BF80160D270B3A670029315F /* CoordinatorFactory.swift in Sources */,
+				BF80161F270CC5E50029315F /* ImageResources.swift in Sources */,
+				BF6B82D92710A7170017D1C1 /* UIView+Extension.swift in Sources */,
 				BF801618270B47670029315F /* LoginViewControllerFactoryProtocol.swift in Sources */,
 				BF801609270B347B0029315F /* LoginCoordinator.swift in Sources */,
 				BF80161D270B6C920029315F /* LoginAssembly.swift in Sources */,

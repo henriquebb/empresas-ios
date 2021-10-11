@@ -15,6 +15,7 @@ class DependencyInjection {
         assembler = Assembler([CoordinatorAssembly(),
                                CoordinatorFactoryAssembly(),
                                ViewControllerAssembly(),
-                               LoginAssembly()])
+                               LoginAssembly(),
+                               DomainAssembly()])
     }
 }
