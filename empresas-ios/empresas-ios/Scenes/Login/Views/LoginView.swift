@@ -97,12 +97,13 @@ class LoginView: UIView {
     
     private lazy var emailTextField: TextField = {
         let emailTextField = TextField()
-        emailTextField.validationDelegate = self
+        emailTextField.textFieldDelegate = self
+        emailTextField.addTextFieldChangeAction()
         emailTextField.layer.borderWidth = 1
         emailTextField.layer.cornerRadius = 8
         emailTextField.layer.borderColor = UIColor.customLightGrey.cgColor
         emailTextField.placeholder = "Email"
-        emailTextField.tintColor = .customLightGrey
+        emailTextField.tintColor = .customDarkGrey
         emailTextField.textContentType = .emailAddress
         return emailTextField
     }()
@@ -123,24 +124,25 @@ class LoginView: UIView {
         return label
     }()
     
-    private lazy var passwordEyeImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage.Login.passwordEye
-        imageView.tintColor = .customMediumGrey
-        return imageView
+    private lazy var passwordEyeButton: UIButton = {
+        let button = UIButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage.Login.passwordEye, for: .normal)
+        button.tintColor = .customMediumGrey
+        button.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        return button
     }()
     
     private lazy var passwordTextField: TextField = {
         let passwordTextField = TextField()
+        passwordTextField.textFieldDelegate = self
         passwordTextField.layer.borderWidth = 1
         passwordTextField.layer.cornerRadius = 8
         passwordTextField.layer.borderColor = UIColor.customLightGrey.cgColor
         passwordTextField.placeholder = "Senha"
-        passwordTextField.tintColor = .customLightGrey
+        passwordTextField.tintColor = .customDarkGrey
         passwordTextField.textContentType = .password
         passwordTextField.isSecureTextEntry = true
-        passwordTextField.addTapGesture(target: self, action: #selector(togglePasswordVisibility))
         return passwordTextField
     }()
     
@@ -171,7 +173,7 @@ class LoginView: UIView {
 
 extension LoginView {
     func addSubviews() {
-        [imageView, view, welcomeStack, passwordEyeImageView].forEach { addSubview($0) }
+        [imageView, view, welcomeStack, passwordEyeButton].forEach { addSubview($0) }
     }
 }
 
@@ -282,15 +284,19 @@ extension LoginView {
     }
     
     func setPasswordEyeConstraints() {
-        NSLayoutConstraint.activate([passwordEyeImageView.heightAnchor.constraint(equalToConstant: 10.27),
-                                     passwordEyeImageView.widthAnchor.constraint(equalToConstant: 14.12),
-                                     passwordEyeImageView.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor,
+        NSLayoutConstraint.activate([passwordEyeButton.heightAnchor.constraint(equalToConstant: 10.27),
+                                     passwordEyeButton.widthAnchor.constraint(equalToConstant: 14.12),
+                                     passwordEyeButton.trailingAnchor.constraint(equalTo: passwordTextField.trailingAnchor,
                                                                                     constant: -19.73),
-                                     passwordEyeImageView.centerYAnchor.constraint(equalTo: passwordTextField.centerYAnchor)])
+                                     passwordEyeButton.centerYAnchor.constraint(equalTo: passwordTextField.centerYAnchor)])
     }
 }
 
 extension LoginView: TextFieldDelegate {
+    func didFocusTextField() {
+        handleExpandingTouch()
+    }
+    
     func validateResult(text: String) {
         guard let result = delegate?.validateEmail(email: text) else {
             return

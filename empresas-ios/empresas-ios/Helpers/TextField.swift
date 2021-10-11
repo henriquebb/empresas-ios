@@ -9,18 +9,19 @@ import UIKit
 
 protocol TextFieldDelegate: AnyObject {
     func validateResult(text: String)
+    func didFocusTextField()
 }
 
 class TextField: UITextField {
     
-    weak var validationDelegate: TextFieldDelegate?
+    weak var textFieldDelegate: TextFieldDelegate?
     
     let edgeInsets = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 35)
     
     init() {
         super.init(frame: .zero)
         delegate = self
-        addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
+        autocapitalizationType = .none
     }
     
     required init?(coder: NSCoder) {
@@ -42,10 +43,18 @@ class TextField: UITextField {
 
 extension TextField: UITextFieldDelegate {
     
+    func addTextFieldChangeAction() {
+        addTarget(self, action: #selector(textDidChange(textField:)), for: .editingChanged)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textFieldDelegate?.didFocusTextField()
+    }
+    
     @objc func textDidChange(textField: UITextField) {
         guard let text = textField.text else {
             return
         }
-        validationDelegate?.validateResult(text: text)
+        textFieldDelegate?.validateResult(text: text)
     }
 }
