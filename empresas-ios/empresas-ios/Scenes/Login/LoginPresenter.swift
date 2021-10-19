@@ -9,7 +9,7 @@ import Foundation
 import Domain
 
 protocol LoginViewable: AnyObject {
-    
+    func validateEmail(value: Bool)
 }
 
 protocol LoginCoordinating: AnyObject {
@@ -33,11 +33,8 @@ class LoginPresenter {
 }
 
 extension LoginPresenter: LoginPresenting {
-    
-}
-
-extension LoginPresenter: LoginViewDelegate {
-    func validateEmail(email: String) -> Bool {
-        emailValidationUseCase.execute(email: email)
+    func validateEmail(email: String) {
+        let value = emailValidationUseCase.execute(email: email)
+        view?.validateEmail(value: value)
     }
 }

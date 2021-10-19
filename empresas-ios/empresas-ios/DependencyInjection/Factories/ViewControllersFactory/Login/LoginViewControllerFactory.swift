@@ -18,11 +18,12 @@ class LoginViewControllerFactory: LoginViewControllerFactoryProtocol {
     
     func makeLoginViewController() -> LoginViewController {
         
-        guard let presenter = resolver?.resolve(LoginPresenting.self) else {
+        guard let presenter = resolver?.resolve(LoginPresenting.self) as? LoginPresenter else {
             preconditionFailure("Login Presenter is nil")
         }
         
         let loginViewController = LoginViewController(presenter: presenter)
+        presenter.attachView(loginViewController)
         return loginViewController
     }
 }

@@ -8,6 +8,7 @@ target 'empresas-ios' do
   # Pods for empresas-ios
     
     pod 'Swinject'
+    pod 'Alamofire', '~> 5.4'
 
   target 'empresas-iosTests' do
     inherit! :search_paths

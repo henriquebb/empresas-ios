@@ -8,7 +8,7 @@
 import UIKit
 
 protocol LoginViewDelegate: AnyObject {
-    func validateEmail(email: String) -> Bool
+    func validateEmail(email: String)
 }
 
 class LoginView: UIView {
@@ -298,12 +298,15 @@ extension LoginView: TextFieldDelegate {
     }
     
     func validateResult(text: String) {
-        guard let result = delegate?.validateEmail(email: text) else {
-            return
-        }
-        emailTextFieldErrorLabel.isHidden = result ? true : false
-        emailTextFieldLabel.textColor = result ? .customDarkGrey : .customError
-        emailTextField.layer.borderColor = result ? UIColor.customLightGrey.cgColor : UIColor.customError.cgColor
+        delegate?.validateEmail(email: text)
+    }
+}
+
+extension LoginView {
+    func modifyEmailTextFieldLayout(validationResult: Bool) {
+        emailTextFieldErrorLabel.isHidden = validationResult ? true : false
+        emailTextFieldLabel.textColor = validationResult ? .customDarkGrey : .customError
+        emailTextField.layer.borderColor = validationResult ? UIColor.customLightGrey.cgColor : UIColor.customError.cgColor
     }
 }
 

@@ -8,13 +8,13 @@
 import UIKit
 
 protocol LoginPresenting: AnyObject {
-    
+    func validateEmail(email: String)
 }
 
 class LoginViewController: UIViewController {
     
-    var loginView = LoginView()
-    var presenter: LoginPresenting?
+    private lazy var loginView = LoginView()
+    private var presenter: LoginPresenting?
     
     init(presenter: LoginPresenting) {
         super.init(nibName: nil, bundle: nil)
@@ -31,13 +31,23 @@ class LoginViewController: UIViewController {
     }
     
     override func loadView() {
-        let loginView = LoginView()
-        loginView.delegate = presenter as? LoginViewDelegate
+        loginView.delegate = self
         view = loginView
     }
 }
 
+extension LoginViewController: LoginViewDelegate {
+    func validateEmail(email: String) {
+        guard let presenter = presenter else {
+            preconditionFailure("Presenter is nil")
+        }
+        presenter.validateEmail(email: email)
+    }
+}
+
 extension LoginViewController: LoginViewable {
-    
+    func validateEmail(value: Bool) {
+        loginView.modifyEmailTextFieldLayout(validationResult: value)
+    }
 }
 
